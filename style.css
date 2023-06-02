@@ -1,0 +1,1082 @@
+:root {
+    --transition: all 250ms linear;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    /* width: 1920px; */
+    /* margin: 0 auto; */
+    background: url(./images/background.png) no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    height: 120px;
+    background: rgba(94, 93, 88, 0.6);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ Navbar ~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1160px;
+    margin: 25px auto;
+}
+
+.logo-wrapper a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-wrapper a:hover {
+    transition: var(--transition);
+}
+
+.logo-container {
+    display: inline-block;
+    position: relative;
+}
+
+.logo-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0px;
+    color: #fff;
+}
+
+.logo-text {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0px;
+    color: #fff;
+}
+
+.logo-text span {
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0px;
+    color: #18CFAB;
+
+}
+
+.logo-text-container {
+    margin-right: auto;
+    margin-left: 5px;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-items li a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.nav-items li {
+    margin-left: 20px;
+}
+
+.nav-items li:hover {
+    color: #18CFAB;
+}
+
+.nav-items li a:hover {
+    color: #18CFAB;
+    border-bottom: 2px solid #18CFAB;
+    padding: 0 0 48px 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Main introduction ~~~~~~~~~~~~~~~~~~~~~~~~ */
+.main {
+    margin-top: 250px;
+}
+
+.main-introduction {
+    width: 1160px;
+    margin: 25px auto;
+    margin-bottom: 242px;
+}
+
+.main-introduction h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 78px;
+    line-height: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 80px;
+}
+
+.wordpress-theme-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.wordpress-theme-text span {
+    color: #18CFAB;
+    margin-left: 10px;
+}
+
+.buy-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1px;
+    text-align: center;
+    color: #D4D4D4;
+    margin-top: 80px;
+}
+
+.purchase-buttons-container {
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+}
+
+.purchase-buttons-container button {
+    margin-right: 25px;
+}
+
+.explore {
+    border-radius: 5px;
+    border: none;
+    width: 170px;
+    height: 64px;
+    cursor: pointer;
+    background: #18CFAB;
+    color: #ffffff;
+    box-shadow: 0 6px 0 rgb(255, 251, 251) inset;
+}
+
+.purchase-now {
+    border-radius: 5px;
+    border: none;
+    width: 170px;
+    height: 64px;
+    cursor: pointer;
+    color: #ffffff;
+    background: #00CBF6;
+    box-shadow: 0 6px 0 rgb(255, 251, 251) inset;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ 4 Options ~~~~~~~~~~~~~~~~~~ */
+
+.four-options-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.four-options-container div {
+    flex-grow: 1;
+    text-align: center;
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 8px solid #ffffff;
+}
+
+.four-options-container>div img {
+    height: 97px;
+    margin: 0 auto 48px;
+}
+
+.option-one {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #18CFAB;
+    background: #1C2A33;
+}
+
+.option-two {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #18CFAB;
+}
+
+.option-three {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #18CFAB;
+    background: #1C2A33;
+}
+
+.option-four {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #18CFAB;
+}
+
+/* ~~~~~~~~~~~~~~~~~ Adapting for my screen ~~~~~~~~~~~~~~~~ */
+@media (max-width: 1920px) {
+    .wrapper {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .four-options-container>div {
+        width: 25%;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~ Our Services ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.services-container {
+    background: #FFFFFF;
+    padding: 84px 84px 20px 84px;
+}
+
+.services {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #4E4E4E;
+}
+
+.services::before {
+    content: '';
+    position: relative;
+    bottom: -64px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.services::after {
+    content: '';
+    position: relative;
+    bottom: -27px;
+    left: 10px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.switching-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1160px;
+    margin: 70px auto;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tabs li {
+    background: #F8FCFE;
+    border: 1px solid #F2F2F2;
+    height: 72px;
+    width: 194px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 39px;
+    color: #717171;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tabs-title.active {
+    position: relative;
+    background: #18CFAB;
+    color: #fff;
+    height: 72px;
+    width: 194px;
+    text-align: center;
+}
+
+/* ~~~~~~~~~~~~~~ Adding Triangle shape ~~~~~~~~~~~~~~~~~~~ */
+.tabs-title.active::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    border: 20px solid transparent;
+    border-top: 18px solid #18CFAB;
+    animation: transparency 0.5s linear;
+}
+
+@keyframes transparency {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tabs-content li {
+    display: none;
+    animation: slide-up 0.5s linear;
+    margin-top: 28px;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.tabs-content-wrapper {
+    display: flex;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777777;
+}
+
+.tabs-text-wrapper {
+    margin-left: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ Purchase block ~~~~~~~~~~~~~~~~~~~~~~ */
+.purchase-block-container {
+    background: url(./images/section2.png) no-repeat;
+    background-size: cover;
+    padding: 126px 0 60px 0;
+}
+
+.purchase-block-container h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #18CFAB;
+}
+
+.purchase-block-container p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #D8D8D8;
+    margin-top: 12px;
+}
+
+.purchase {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 66px auto;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~ Our Amazing Work ~~~~~~~~~~~~~~~~~~~~ */
+.our-amazing-work {
+    position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #4E4E4E;
+    padding: 95px 95px 70px 95px;
+    background: #E9EDEF;
+}
+
+.amazing-work-caption::before {
+    content: '';
+    position: relative;
+    bottom: -64px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.amazing-work-caption::after {
+    content: '';
+    position: relative;
+    bottom: -27px;
+    left: 10px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.amazing-work-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+}
+
+.amazing-tabs {
+    display: flex;
+}
+
+.amazing-tabs li {
+    background: #E9EDEF;
+    border: 1px solid #DADADA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 18px;
+}
+
+.amazing-tabs-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 42px;
+    color: #717171;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.amazing-tabs-title.active {
+    border: 2px solid #18CFAB;
+    color: #18CFAB;
+}
+
+/* .amazing-tabs-content li {
+    display: flex;
+} */
+
+/* .amazing-tabs-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 70px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 0;
+} */
+
+#amazing-section {
+    /* position: relative; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    margin-top: 70px;
+    /* grid-template-rows: repeat(2, 1fr); */
+    /* grid-auto-rows: 0; */
+}
+
+.all-images {
+    display: none;
+}
+
+.more-images {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~~~~ Amazing tabs Animation ~~~~~~~~~~~~~~~~~~~~ */
+/* .amazing-tabs-wrapper {
+    display: flex;
+} */
+
+.amazing-tabs-wrapper img:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+    animation: slide-left 0.5s linear;
+}
+
+.amazing-tabs-wrapper img:nth-child(1),
+.amazing-tabs-wrapper img:nth-child(2),
+.amazing-tabs-wrapper img:nth-child(3),
+.amazing-tabs-wrapper img:nth-child(4) {
+
+    animation: slide-up 0.5s linear;
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.load-more-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide-up 0.5s linear;
+        margin-top: 270px;
+    /* margin: 50px auto; */
+}
+
+.load-more {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #18CFAB;
+    border: none;
+    border-top: #18CFAB;
+    padding: 4px 18px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.load-more span {
+    color: #FFFFFF;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+/* ~~~~~~~~~~~~~~~~~ Creating Hover for amazing images ~~~~~~~~~~~~~~ */
+
+   /* .amazing-tabs-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 70px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 0;
+  } */
+  
+  .hover-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hover-image .image-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: #E9EDEF;
+    color: white;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+  }
+  
+  .hover-image:hover .image-content {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+.creative-design {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #18CFAB;
+}
+
+.image-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 285px;
+    height: 207px;
+  }
+
+  .link-img {
+   width: 88px;
+   margin: 0 auto;
+   margin-bottom: 40px;
+  }
+  
+.web-design {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 25px;
+    color: #8A8A8A;
+}
+
+/* ~~~~~~~~~~~~ Breaking News ~~~~~~~~~~~~~~~~~ */
+.breaking-news-section {
+    background: #FFFFFF;
+    padding: 82px 0 128px 0;
+}
+
+.breaking-news {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.breaking-news-caption {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #4E4E4E;
+}
+
+.breaking-news-caption::before {
+    content: '';
+    position: relative;
+    bottom: -64px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.breaking-news-caption::after {
+    content: '';
+    position: relative;
+    bottom: -27px;
+    left: 10px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.breaking-news-content {
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 90px;
+    /* Adjust the number of columns as needed */
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 0;
+    grid-gap: 35px;
+}
+
+.grid-caption {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 39px;
+    text-align: center;
+    color: #717171;
+}
+
+.breaking-news-content a {
+    text-decoration: none;
+}
+
+.orange-grid-text-1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 39px;
+    color: #777777;
+}
+
+.post {
+    padding: 0 8px;
+}
+
+/* ~~~~~~~~~~~~~~~ Grid items and hover ~~~~~~~~~~~~~~~ */
+
+.grid-item-1 {
+    position: relative;
+}
+
+.grid-item-2 {
+    position: relative;
+}
+
+.grid-item-3 {
+    position: relative;
+}
+
+.grid-item-4 {
+    position: relative;
+}
+
+.grid-item-5 {
+    position: relative;
+}
+
+.grid-item-6 {
+    position: relative;
+}
+
+.grid-item-7 {
+    position: relative;
+}
+
+.grid-item-8 {
+    position: relative;
+}
+
+.flex p:hover {
+    color: coral;
+}
+
+.grid-item-1 a:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-1 a:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-2:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-2:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-3:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-3:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-4:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-4:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-5:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-5:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-6:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-6:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-7:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-7:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.grid-item-8:hover .img-hover {
+    background: #18CFAB;
+}
+
+.grid-item-8:hover .grid-caption {
+    color: #18CFAB;
+}
+
+.img-hover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #203E38;
+    width: 70px;
+    height: 68px;
+}
+
+/* ~~~~~~~~~~~~~~~~~ What people say ~~~~~~~~~~~~~~~~~~~~~~~~ */
+.what-people-say {
+    background: url(./images/section-3.jpg) no-repeat;
+    background-size: cover;
+    padding-top: 98px;
+}
+
+.what-people-say-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.what-people-say h2 {
+    position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.what-people-say h2::before {
+    content: '';
+    position: relative;
+    bottom: -64px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.what-people-say h2::after {
+    content: '';
+    position: relative;
+    bottom: -27px;
+    left: 10px;
+    border: 1px solid #18CFAB;
+    display: flex;
+    width: 78px;
+    margin: 0 auto;
+}
+
+.what-people-say-descr {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #BBBBBB;
+}
+
+.quotes {
+    color: #18CFAB;
+    text-align: center;
+    font-size: 65px;
+    margin-top: 66px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~ Slider ~~~~~~~~~~~~~~~~~~~~ */
+.my-carousel {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.what-people-say-descr img {
+    display: inline-flex;
+    margin: 10px auto;
+}
+
+.slick-prev {
+    position: absolute;
+    left: -15%;
+    top: 30%;
+    background: rgba(0, 0, 0, 0.0001);
+    border: 1px solid #BBBBBB;
+    color: #ffffff;
+}
+
+.slick-prev::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: url(./slick-images/arrow1.png);
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+.slick-next {
+    position: absolute;
+    right: -8%;
+    top: 30%;
+    background: rgba(0, 0, 0, 0.0001);
+    border: 1px solid #BBBBBB;
+    color: #ffffff;
+}
+
+.slick-next::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: url(./slick-images/arrow2.png);
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+.slick-prev:hover {
+    background: #18CFAB;
+}
+
+.slick-next:hover {
+    background: #18CFAB;
+}
+
+.slick-slide img {
+    border-radius: 50%;
+    border: 5px solid #1fdab53b;
+
+}
+
+.slick-slide {
+    transform: scale(0.8);
+    margin-top: -30px;
+}
+
+.slick-center {
+    transform: scale(1.1);
+    margin-top: -40px;
+}
+
+.img-name {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #18CFAB;
+    padding: 37px 0 5px 0;
+}
+
+.img-designer {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 27px;
+    text-align: center;
+    color: #BBBBBB;
+}
+
+.my-carousel img {
+    width: 60px;
+    margin: 50px 0 50px 45px;
+}
+
+.upper-img img {
+    width: 143px;
+}
+
+/* ~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~ */
+.footer {
+    background: #22353F;
+}
+
+.footer p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #AEAEAE;
+    padding: 48px;
+}
+
+.footer span {
+    margin: 4px;
+}
+
+.footer span a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #18CFAB;
+    text-decoration: none;
+}
