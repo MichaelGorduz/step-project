@@ -5,7 +5,8 @@ $('.uix-designer-container').slick({
     arrows: false,
     fade: true,
     cssEase: 'linear',
-    asNavFor: '.my-carousel'
+    asNavFor: '.my-carousel',
+    infinite: true,
 });
 $('.my-carousel').slick({
     slidesToShow: 3,
@@ -15,5 +16,6 @@ $('.my-carousel').slick({
     centerMode: true,
     focusOnSelect: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
+    infinite: true,
 });

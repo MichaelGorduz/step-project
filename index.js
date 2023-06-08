@@ -38,118 +38,139 @@ window.addEventListener("DOMContentLoaded", () => {
 function switchAmazingTabs() {
     const tabTitles = document.querySelectorAll('.amazing-tabs-title');
     const tabWrappers = document.querySelectorAll('.amazing-tabs-wrapper');
-    const tabsContainer = document.querySelector('.amazing-tabs');
-    const allImagesContainer = document.querySelector('.all-images');
-    const allImages = Array.from(allImagesContainer.querySelectorAll('img'));
+    const allImages = Array.from(document.querySelector('.all-images').querySelectorAll('img'));
     const loadMoreButton = document.querySelector('.load-more');
-    let isButtonClicked = false;
-
-    const sortImages = (container) => {
-        const category = container.getAttribute('data-category');
-        const imagesToDisplay = allImages.filter((image) => image.getAttribute('data-category') === category);
-
-        container.innerHTML = '';
-
-        imagesToDisplay.forEach((image, index) => {
-            const hoverImageContainer = document.createElement('div');
-            hoverImageContainer.classList.add('hover-image');
-
-            const imageContent = document.createElement('div');
-            imageContent.classList.add('image-content');
-
-            const creativeDesign = document.createElement('p');
-            creativeDesign.classList.add('creative-design');
-            creativeDesign.textContent = 'Creative Design';
-
-            const webDesign = document.createElement('p');
-            webDesign.classList.add('web-design');
-            webDesign.textContent = 'Web Design';
-
-            const linkImage = document.createElement("img");
-            linkImage.src = "./images/Link.png";
-            linkImage.classList.add('link-img');
-
-            imageContent.appendChild(linkImage);
-            imageContent.appendChild(creativeDesign);
-            imageContent.appendChild(webDesign);
-
-            hoverImageContainer.appendChild(image);
-            hoverImageContainer.appendChild(imageContent);
-
-            container.appendChild(hoverImageContainer);
-        });
-
+    let buttonClicked = false;
+    const button = document.getElementById('myButton');
+    const spinner = document.getElementById('spinner');
+  
+    const createHoverImage = (category) => {
+      const hoverImageContainer = document.createElement('div');
+      hoverImageContainer.className = 'hover-image';
+  
+      const imageContent = document.createElement('div');
+      imageContent.className = 'image-content';
+  
+      const creativeDesign = document.createElement('p');
+      creativeDesign.className = 'creative-design';
+      creativeDesign.textContent = 'Creative Design';
+  
+      const webDesign = document.createElement('p');
+      webDesign.className = 'web-design';
+      webDesign.textContent = category;
+  
+      const linkImage = document.createElement('img');
+      linkImage.src = './images/Link.png';
+      linkImage.className = 'link-img';
+  
+      imageContent.append(linkImage, creativeDesign, webDesign);
+      hoverImageContainer.appendChild(imageContent);
+  
+      return hoverImageContainer;
     };
-
-    const loadMoreImages = () => {
-        const moreImagesContainer = document.querySelector('.more-images');
-        const moreImages = Array.from(moreImagesContainer.querySelectorAll('img'));
-
-        moreImages.forEach((image) => {
-            const category = image.getAttribute('data-category');
-            const correspondingWrapper = document.querySelector(`.amazing-tabs-wrapper[data-category="${category}"]`);
-
-            if (correspondingWrapper) {
-                correspondingWrapper.appendChild(image);
-            }
-        });
-
-        loadMoreButton.style.display = 'none';
-        const amazingTabsContent = document.querySelector('.amazing-tabs-content');
-        isButtonClicked = true;
-        if (isButtonClicked && tabTitles[0].classList.contains('active')) {
-            amazingTabsContent.style.gridTemplateRows = 'repeat(5, 1fr)';
-            amazingTabsContent.style.gridTemplateRows = "repeat(2, 1fr)";
-        }
+  
+    const createImages = (container) => {
+      const category = container.getAttribute('data-category');
+      const imagesToDisplay = allImages.filter((image) => image.getAttribute('data-category') === category);
+  
+      container.innerHTML = '';
+      imagesToDisplay.forEach((image) => {
+        const hoverImageContainer = createHoverImage(category);
+        hoverImageContainer.appendChild(image);
+        container.appendChild(hoverImageContainer);
+      });
     };
-
-    tabsContainer.addEventListener('click', (event) => {
-        const tab = event.target.closest('.amazing-tabs-title');
-        if (!tab) return;
-
-        const category = tab.getAttribute('data-category');
-
-        tabWrappers.forEach((wrapper) => {
-            const imgCategory = wrapper.getAttribute('data-category');
-            if (imgCategory === category) {
-                wrapper.style.display = 'grid';
-                wrapper.style.gridTemplateColumns = "repeat(4, 1fr)";
-                wrapper.style.gridTemplateRows = "repeat(2, 1fr)";
-
-            } else if (category === 'all') {
-                wrapper.style.display = 'grid';
-                wrapper.style.gridTemplateColumns = "repeat(4, 1fr)";
-                wrapper.style.gridTemplateRows = "repeat(2, 1fr)";
-                wrapper.style.gridAutoRows= "0";
-
-            } else {
-                wrapper.style.display = 'none';
-            }
-        });
-
-        tabTitles.forEach((title) => title.classList.remove('active'));
-        tab.classList.add('active');
-
-        tabWrappers.forEach(sortImages);
-
-        if (category === 'all' && !isButtonClicked) {
-            loadMoreButton.style.display = 'block';
-        } else {
-            loadMoreButton.style.display = 'none';
+  
+    allImages.forEach((image) => {
+      const category = image.getAttribute('data-category');
+      Array.from(tabWrappers).forEach((wrapper) => {
+        const correspondingCategory = wrapper.getAttribute('data-category');
+        if (category === correspondingCategory || correspondingCategory === 'all') {
+          wrapper.appendChild(image);
         }
-
-        const amazingTabsContent = document.querySelector('.amazing-tabs-content');
-        if (category === 'all' && isButtonClicked) {
-            amazingTabsContent.style.gridTemplateRows = 'repeat(5, 1fr)';
-        } else {
-            amazingTabsContent.style.gridTemplateRows = 'repeat(2, 1fr)';
-        }
+      });
     });
+  
+    Array.from(tabTitles).forEach((title) => {
+      title.addEventListener('click', () => {
+        const category = title.getAttribute('data-category');
+  
+        Array.from(tabWrappers).forEach((wrapper) => {
+          const correspondingCategory = wrapper.getAttribute('data-category');
+          if (category === 'all') {
+            if (buttonClicked) {
+              if (
+                correspondingCategory === 'Graphic Design' ||
+                correspondingCategory === 'Web Design' ||
+                correspondingCategory === 'Landing Pages' ||
+                correspondingCategory === 'Wordpress'
+              ) {
+                wrapper.style.display = 'flex';
+              } else {
+                wrapper.style.display = 'none';
+              }
+            } else {
+              if (
+                correspondingCategory === 'Graphic Design' ||
+                correspondingCategory === 'Web Design'
+              ) {
+                wrapper.style.display = 'flex';
+              } else {
+                wrapper.style.display = 'none';
+              }
+            }
+          } else {
+            if (category === correspondingCategory) {
+              wrapper.style.display = 'flex';
+            } else {
+              wrapper.style.display = 'none';
+            }
+          }
+        });
+  
+        Array.from(tabTitles).forEach((t) => {
+          t.classList.remove('active');
+        });
+  
+        title.classList.add('active');
+  
+        tabWrappers.forEach(createImages);
+  
+        if (!buttonClicked) {
+          loadMoreButton.style.display = category === 'all' ? 'block' : 'none';
+        }
+      });
+    });
+  
+    loadMoreButton.addEventListener('click', () => {
+      buttonClicked = true;
+      loadMoreButton.style.display = 'none';
+      spinner.style.display = 'block'; // Show the loading spinner
 
-    loadMoreButton.addEventListener('click', loadMoreImages);
+      setTimeout(() => {
+  
+      Array.from(tabWrappers).forEach((wrapper) => {
+        const correspondingCategory = wrapper.getAttribute('data-category');
+        if (
+          correspondingCategory === 'Graphic Design' ||
+          correspondingCategory === 'Web Design' ||
+          correspondingCategory === 'Landing Pages' ||
+          correspondingCategory === 'Wordpress'
+        ) {
+          wrapper.style.display = 'flex';
+        } else {
+          wrapper.style.display = 'none';
+        }
+        spinner.style.display = 'none';
+      });
 
+      spinner.style.display = 'none'; // Hide the loading spinner
+    }, 3000);
+    });
+   
     tabTitles[0].click();
-}
+  }
+  
 
 /* ~~~~~~~~~~~~~~~~~~~~~ Animation on Scroll ~~~~~~~~~~~~~~~~~~~~~~~ */
 

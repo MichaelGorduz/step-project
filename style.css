@@ -7,8 +7,6 @@
 }
 
 .wrapper {
-    /* width: 1920px; */
-    /* margin: 0 auto; */
     background: url(./images/background.png) no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -104,6 +102,7 @@ nav {
 
 .nav-items li {
     margin-left: 20px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .nav-items li:hover {
@@ -124,7 +123,6 @@ nav {
 .main-introduction {
     width: 1160px;
     margin: 25px auto;
-    margin-bottom: 242px;
 }
 
 .main-introduction h1 {
@@ -204,6 +202,7 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 200px;
 }
 
 .four-options-container div {
@@ -218,8 +217,11 @@ nav {
 }
 
 .four-options-container>div img {
-    height: 97px;
     margin: 0 auto 48px;
+}
+
+.four-options-container p {
+    margin-top: 22px;
 }
 
 .option-one {
@@ -338,6 +340,10 @@ nav {
     align-items: center;
 }
 
+.tabs li:hover {
+    border: 1.5px solid #18CFAB;
+}
+
 .tabs-title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -410,7 +416,7 @@ nav {
     color: #777777;
 }
 
-.tabs-text-wrapper {
+.tabs-content-wrapper p {
     margin-left: 20px;
 }
 
@@ -463,6 +469,7 @@ nav {
     color: #4E4E4E;
     padding: 95px 95px 70px 95px;
     background: #E9EDEF;
+    max-height: 2200px;
 }
 
 .amazing-work-caption::before {
@@ -524,25 +531,8 @@ nav {
     color: #18CFAB;
 }
 
-/* .amazing-tabs-content li {
-    display: flex;
-} */
-
-/* .amazing-tabs-content {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 70px;
-    grid-template-rows: repeat(2, 1fr);
-    grid-auto-rows: 0;
-} */
-
 #amazing-section {
-    /* position: relative; */
-    /* grid-template-columns: repeat(4, 1fr); */
     margin-top: 70px;
-    /* grid-template-rows: repeat(2, 1fr); */
-    /* grid-auto-rows: 0; */
 }
 
 .all-images {
@@ -554,13 +544,24 @@ nav {
 }
 
 /* ~~~~~~~~~~~~~~~ Amazing tabs Animation ~~~~~~~~~~~~~~~~~~~~ */
-/* .amazing-tabs-wrapper {
+.amazing-tabs-wrapper {
     display: flex;
-} */
-
-.amazing-tabs-wrapper img:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
-    animation: slide-left 0.5s linear;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+
+.amazing-tabs-content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 1140px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .amazing-tabs-wrapper img:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+    animation: slide-left 0.5s linear;
+} */
 
 .amazing-tabs-wrapper img:nth-child(1),
 .amazing-tabs-wrapper img:nth-child(2),
@@ -570,7 +571,7 @@ nav {
     animation: slide-up 0.5s linear;
 }
 
-@keyframes slide-left {
+/* @keyframes slide-left {
     from {
         transform: translateX(-100%);
     }
@@ -578,7 +579,7 @@ nav {
     to {
         transform: translateX(0);
     }
-}
+} */
 
 .load-more-container {
     position: relative;
@@ -586,8 +587,7 @@ nav {
     justify-content: center;
     align-items: center;
     animation: slide-up 0.5s linear;
-        margin-top: 270px;
-    /* margin: 50px auto; */
+    margin-bottom: 20px;
 }
 
 .load-more {
@@ -607,7 +607,6 @@ nav {
     align-items: center;
 }
 
-
 .load-more span {
     color: #FFFFFF;
     margin-right: 10px;
@@ -616,23 +615,14 @@ nav {
 
 /* ~~~~~~~~~~~~~~~~~ Creating Hover for amazing images ~~~~~~~~~~~~~~ */
 
-   /* .amazing-tabs-content {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 70px;
-    grid-template-rows: repeat(2, 1fr);
-    grid-auto-rows: 0;
-  } */
-  
-  .hover-image {
+.hover-image {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .hover-image .image-content {
+}
+
+.hover-image .image-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -641,16 +631,14 @@ nav {
     background: #E9EDEF;
     color: white;
     padding: 10px;
-    visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s;
-  }
-  
-  .hover-image:hover .image-content {
-    visibility: visible;
+    transition: var(--transition);
+}
+
+.hover-image:hover .image-content {
     opacity: 1;
-  }
-  
+}
+
 
 .creative-design {
     font-family: 'Montserrat';
@@ -668,14 +656,20 @@ nav {
     justify-content: center;
     width: 285px;
     height: 207px;
-  }
+}
 
-  .link-img {
-   width: 88px;
-   margin: 0 auto;
-   margin-bottom: 40px;
-  }
-  
+.link-img {
+    width: 88px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.link-img:hover {}
+
+.hidden {
+    display: none;
+}
+
 .web-design {
     font-family: 'Montserrat';
     font-style: normal;
@@ -684,6 +678,87 @@ nav {
     line-height: 25px;
     color: #8A8A8A;
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~ Load Spinner ~~~~~~~~~~~~~~~~~~~~ */
+
+.lds-spinner {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: none;
+  }
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 6px;
+    height: 18px;
+    border-radius: 20%;
+    background: #eea3d7
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 /* ~~~~~~~~~~~~ Breaking News ~~~~~~~~~~~~~~~~~ */
 .breaking-news-section {
@@ -728,11 +803,9 @@ nav {
 }
 
 .breaking-news-content {
-    /* position: relative; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 90px;
-    /* Adjust the number of columns as needed */
     grid-template-rows: repeat(2, 1fr);
     grid-auto-rows: 0;
     grid-gap: 35px;
@@ -759,6 +832,7 @@ nav {
     font-size: 14px;
     line-height: 39px;
     color: #777777;
+    text-align: center;
 }
 
 .post {
@@ -966,6 +1040,7 @@ nav {
     background: rgba(0, 0, 0, 0.0001);
     border: 1px solid #BBBBBB;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .slick-prev::after {
@@ -984,6 +1059,7 @@ nav {
     background: rgba(0, 0, 0, 0.0001);
     border: 1px solid #BBBBBB;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .slick-next::after {
